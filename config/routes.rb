@@ -42,6 +42,8 @@ Api::Application.routes.draw do
       end
       resources :nodes, :only => [:index, :show]
     end
+  # abasu bug #7301 to incorporate feature /servers -- 2016.10.24  
+    resources :servers, :only => [:index, :show]
     resources :jobs
     resources :deployments
   end
